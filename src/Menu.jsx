@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Product from './Product'
+import './Menu.css';
 
 const Menu = (props) => {
     return (
         <div className='Menu'>
-            <h2>{props.title}</h2>
+            <h2 style={{paddingTop:'20px'}}>{props.title}</h2>
             <div>
                 {
                     props.products.map((p) => {

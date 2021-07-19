@@ -2,8 +2,12 @@ html, body {
     margin: 0px;
     padding: 0px;
     text-align: center;
-    background-color: #785e3c;
+
     font-family: 'Great Vibes', cursive;
+}
+
+h1,h2,h3,h4{
+    margin:0px
 }
 
 h1{
