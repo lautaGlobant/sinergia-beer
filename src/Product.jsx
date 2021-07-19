@@ -9,7 +9,8 @@ const Product = (props) => {
                 <h3>{props.product.name}</h3>
                 <span>{props.product.desc}</span>
             </div>
-                <div className='Price'>
+            
+            <div className='Price'>
                 <span>{props.product.price}</span>
             </div>
         </div>
