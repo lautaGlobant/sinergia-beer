@@ -1,0 +1,11 @@
+.Product{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.Price, .Desc{
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+}
