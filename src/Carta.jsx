@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Menu from './Menu.jsx';
+import './Carta.css';
 
 const Carta = (props) => {
     return (
