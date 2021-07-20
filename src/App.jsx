@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './Header.jsx';
 import Carta from './Carta.jsx';
 import Footer from './Footer.jsx';
+import Delivery from './Delivery.jsx';
 import background from '../public/images/TexturesCom_WoodPlanksOld0292_7_seamless_S.jpg';
 import './App.css';
 
@@ -17,6 +18,7 @@ const App = () => {
     return (
         <div className='App' style={{ backgroundImage: 'url('+background+')' }}>
             <Header />
+            <Delivery />
             <Carta list={products}/>
             <Footer />
         </div> 
