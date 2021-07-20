@@ -4,6 +4,7 @@ import image from '../public/images/logo-ex.png'
 
 const Header = () => {
     let screen = window.screen.height;
+    if(screen > 500) { screen = screen - 150}
     
     return (
         <div className='Header' style={{backgroundColor:'#2b2b2b', height:screen+'px', paddingBottom:'15px'}}>

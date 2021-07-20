@@ -1,0 +1,39 @@
+.Delivery{
+    position: fixed;
+    left: 100%;
+    top: 25px;
+    background-color: #c9c9c9;
+    z-index: 1;
+    opacity: 0.5;
+    width: 200px;
+    transition: 0.5s;
+    font-family: 'Raleway', sans-serif;
+}
+
+.Delivery:hover{
+    opacity: 1;
+}
+
+.Delivery span{
+    margin: 5px;
+}
+
+.Delivery button{
+    margin:15px;
+    width: 90%;
+}
+
+.lengueta{
+    width: 100px;
+    margin-left: -120px;
+    background-color: #c9c9c9;
+    padding: 10px;
+}
+
+.active{
+    transform: translateX(-200px);
+}
+
+.inactive{
+    transform: translateX(0px);
+}
