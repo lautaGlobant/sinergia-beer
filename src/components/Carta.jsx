@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { connect } from 'react-redux';
 import Menu from './Menu.jsx';
 import './Carta.css';
 
@@ -15,4 +16,8 @@ const Carta = (props) => {
     )
 }
 
-export default Carta;
+const mapStateToProps = (state) => {
+    return { list: state.listProds }
+}
+
+export default connect(mapStateToProps)(Carta);
