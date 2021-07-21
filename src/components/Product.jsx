@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { connect } from 'react-redux';
 import './Product.css';
 
 const Product = (props) => {
@@ -12,7 +12,7 @@ const Product = (props) => {
             
             <div className='Price'>
                 <span>{props.product.price}</span>
-                <div className='addProd' onClick={() => {console.log('redux!')}}>
+                <div className='addProd' onClick={() => { props.dispatch({ type:'ADD', prod:props.product }) }}>
                     <span>+</span>
                 </div>
             </div>
@@ -20,4 +20,4 @@ const Product = (props) => {
     )
 }
 
-export default Product;
+export default connect()(Product);

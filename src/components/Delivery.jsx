@@ -1,15 +1,14 @@
 import React  from 'react'
-import { useState } from 'react';
-import ReactDOM from 'react-dom'
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux'
+import ListProduct from './ListProduct';
 import './Delivery.css';
 
-const Delivery = () => {
+const Delivery = (props) => {
     const [isActive, setIsActive] = useState(false);
     const [show, setShow] = useState('inactive');
-    const [products, setProducts] = useState([]);
     
     const showDelivery = () => {
-        console.log('paso algo')
         if(isActive === false){
             setShow('active');
             setIsActive(true);
@@ -18,35 +17,39 @@ const Delivery = () => {
             setIsActive(false);
         }
     }
+    
+    
+
+    let cartList;
+    if(props.products.length > 0){
+        cartList = (
+            <div className='myProds'>
+                {props.products.map((p) => {
+                    return <ListProduct key={p.name} product={p}/>
+                })}
+            </div>
+        )
+    }else {
+        cartList = (
+            <div className='myProds'>
+                <h3>¡Nada por ahora!</h3>
+            </div>
+        )
+    }
+
+    console.log(props.products)
 
     return (
         <div className={'Delivery ' + show}>
-            <h4 onClick={() => showDelivery()} class='lengueta' >¡Tu pedido!</h4>
-            <div>
-            <div className='ListProduct'>
-                <span>Doble Ipa</span>
-                <span>$150</span>
-                <span>x2</span>
-            </div>
-            <div className='ListProduct'>
-                <span>Blonde ALe</span>
-                <span>$150</span>
-                <span>1</span>
-            </div>
-            <div className='ListProduct'>
-                <span>Papas con cheddar</span>
-                <span>$150</span>
-                <span>x2</span>
-            </div>
-        </div>
-                {/*
-                    products.map((p) => {
-                        return <ListProduct product={p}/>
-                    })
-                */}
+            <h4 onClick={() => showDelivery()} className='lengueta' >¡Tu pedido!</h4>
+            {cartList}
             <button value='Pedir' >Pedir</button>
         </div>
     )
 }
 
-export default Delivery;
+const mapStateToProps = (state) => {
+    return { products: state.products }
+}
+
+export default connect(mapStateToProps)(Delivery);
