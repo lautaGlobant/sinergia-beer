@@ -12,6 +12,9 @@ const Product = (props) => {
             
             <div className='Price'>
                 <span>{props.product.price}</span>
+                <div className='addProd' onClick={() => {console.log('redux!')}}>
+                    <span>+</span>
+                </div>
             </div>
         </div>
     )

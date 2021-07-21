@@ -27,6 +27,20 @@
     text-align: right;
 }
 
+.addProd{
+    font-size: 2rem;
+    text-align: center;
+    width: 50%;
+    left: 50%;
+    position: relative;
+    opacity: .5;
+    transition: 0.5s;
+}
+
+.addProd:hover{
+    opacity: 1;
+}
+
 h3{
     margin: 0px;
 }

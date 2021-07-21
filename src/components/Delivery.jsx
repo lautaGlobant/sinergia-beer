@@ -29,12 +29,12 @@ const Delivery = () => {
                 <span>x2</span>
             </div>
             <div className='ListProduct'>
-                <span>Doble Ipa</span>
+                <span>Blonde ALe</span>
                 <span>$150</span>
-                <span>x2</span>
+                <span>1</span>
             </div>
             <div className='ListProduct'>
-                <span>Doble Ipa</span>
+                <span>Papas con cheddar</span>
                 <span>$150</span>
                 <span>x2</span>
             </div>
