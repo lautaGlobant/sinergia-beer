@@ -4,7 +4,7 @@ import Header from './Header.jsx';
 import Carta from './Carta.jsx';
 import Footer from './Footer.jsx';
 import Delivery from './Delivery.jsx';
-import background from '../public/images/TexturesCom_WoodPlanksOld0292_7_seamless_S.jpg';
+import background from '../../public/images/TexturesCom_WoodPlanksOld0292_7_seamless_S.jpg'
 import './App.css';
 
 const rootEl = document.getElementById('root');

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import image from '../public/images/logo-ex.png'
+import image from '../../public/images/logo-ex.png'
 
 const Header = () => {
     let screen = window.screen.height;
