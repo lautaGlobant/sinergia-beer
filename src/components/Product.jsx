@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import './Product.css';
 
 const Product = (props) => {
+    const addProduct = (prod) => {
+        props.dispatch({ type:'ADD', prod:prod })
+    }
+
     return (
         <div className='Product'>
             <div className='Desc'>
@@ -12,7 +16,7 @@ const Product = (props) => {
             
             <div className='Price'>
                 <span>{props.product.price}</span>
-                <div className='addProd' onClick={() => { props.dispatch({ type:'ADD', prod:props.product }) }}>
+                <div className='addProd' onClick={() => { addProduct(props.product) }}>
                     <span>+</span>
                 </div>
             </div>

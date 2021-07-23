@@ -9,9 +9,9 @@ import './App.css';
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { addReducer } from './reducers/addProdReducer'
+import { addRemoveReducer } from './reducers/addRemoveProdReducer'
 
-const store = createStore(addReducer);
+const store = createStore(addRemoveReducer);
 
 const App = () => {
     return (

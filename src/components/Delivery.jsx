@@ -17,15 +17,13 @@ const Delivery = (props) => {
             setIsActive(false);
         }
     }
-    
-    
 
     let cartList;
     if(props.products.length > 0){
         cartList = (
             <div className='myProds'>
-                {props.products.map((p) => {
-                    return <ListProduct key={p.name} product={p}/>
+                {props.products.map((p, index) => {
+                    return <ListProduct key={index} product={p}/>
                 })}
             </div>
         )
@@ -37,10 +35,8 @@ const Delivery = (props) => {
         )
     }
 
-    console.log(props.products)
-
     return (
-        <div className={'Delivery ' + show}>
+        <div onMouseLeave={() => { setShow('inactive'); setIsActive(false); }} className={'Delivery ' + show}>
             <h4 onClick={() => showDelivery()} className='lengueta' >¡Tu pedido!</h4>
             {cartList}
             <button value='Pedir' >Pedir</button>

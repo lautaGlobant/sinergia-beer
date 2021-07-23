@@ -18,6 +18,10 @@
     text-align: left;
 }
 
+.Desc h3{
+    font-size: 1.5rem;
+}
+
 .Desc span{
     font-family: 'Raleway', sans-serif;
 }
